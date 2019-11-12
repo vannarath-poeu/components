@@ -1,29 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {get} from './constants'
 import Avatar from './Avatar'
 import theme from './theme'
-
-const getBackgroundColor = get('colors.white')
 
 const Wrapper = styled('div')`
   display: inline-flex;
   position: relative;
 `
 
-const childStyles = props => ({
+const childStyles = props => css`
   display: 'inline-block',
   overflow: 'hidden', // Ensure page layout in Firefox should images fail to load
-  lineHeight: `${get('lineHeights.condensedUltra')}`,
+  lineHeight: ${get('lineHeights.condensedUltra')},
   verticalAlign: 'middle',
   borderRadius: '2px',
   position: 'absolute',
   right: '-15%',
   bottom: '-9%',
   boxShadow: '-2px -2px 0 rgba(255,255,255,0.8)',
-  backgroundColor: `${getBackgroundColor(props)}`
-})
+  backgroundColor: ${get('colors.white')}; //theme-audit: bg-white
+`
 
 const ChildAvatar = styled(Avatar)(childStyles)
 const AvatarPair = ({children, ...rest}) => {

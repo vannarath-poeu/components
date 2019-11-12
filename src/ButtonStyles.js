@@ -5,9 +5,9 @@ export default css`
   position: relative;
   display: inline-block;
   padding: 6px 12px;
-  color: ${get('colors.gray.9')};
-  background-color: ${get('colors.gray.1')};
-  background-image: linear-gradient(-180deg, ${get('colors.gray.0')} 0%, ${get('colors.button.bg2')} 90%);
+  color: ${get('colors.button.default.text')};
+  background-color: ${get('colors.button.default.bg')};
+  background-image: linear-gradient(-180deg, ${get('colors.button.default.gradient1')} 0%, ${get('colors.button.default.gradient2')} 90%);
   font-size: ${get('fontSizes.1')}px;
   font-weight: ${get('fontWeights.bold')};
   line-height: 20px;
@@ -18,25 +18,25 @@ export default css`
   background-repeat: repeat-x;
   background-position: -1px -1px;
   background-size: 110% 110%;
-  border: 1px solid ${get('colors.button.border')};
+  border: 1px solid ${get('colors.button.default.border')};
   border-radius: 0.25em;
   appearance: none;
   text-decoration: none;
 
   &:hover {
-    background-color: ${get('colors.button.hoverBg')};
-    background-image: linear-gradient(-180deg, ${get('colors.button.bg2')} 0%, ${get('colors.button.hoverBg')} 90%);
+    background-color: ${get('colors.button.default.hoverBg')};
+    background-image: linear-gradient(-180deg, ${get('colors.button.default.gradient2')} 0%, ${get('colors.button.hoverBg')} 90%); // not sure if these should have their own theme variables?
     background-position: -0.5em center;
-    border-color: ${get('colors.blackfade35')};
+    border-color: ${get('colors.button.deault.hoverBorder')}; 
     text-decoration: none;
     background-repeat: repeat-x;
   }
 
   &:active {
-    background-color: ${get('colors.button.activeBg')};
+    background-color: ${get('colors.button.default.activeBg')};
     background-image: none;
-    box-shadow: ${get('colors.blackfade15')} 0px 0.15em 0.3em inset;
-    border-color: ${get('colors.button.border')}; //convert black to rbg here
+    box-shadow: ${get('colors.button.default.activeBoxShadow')} 0px 0.15em 0.3em inset;
+    border-color: ${get('colors.button.default.activeBorder')}; // why does this exist? it's the same color as the default border?
   }
 
   ${props =>

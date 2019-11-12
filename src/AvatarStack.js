@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {get, COMMON} from './constants'
 import theme from './theme'
 
 const alignRightStyles = theme => {
-  return `
+  return css`
     right: 0;
     flex-direction: row-reverse;
 
@@ -22,7 +22,7 @@ const alignRightStyles = theme => {
       }
 
       &::after {
-        background: ${get('colors.gray.1')(theme)};
+        background: ${get('colors.gray.1')}; // theme-audit: one-off
         width: 2px;
       }
     }
@@ -31,7 +31,7 @@ const alignRightStyles = theme => {
       margin-right: 0;
       margin-left: -11px;
       border-right: 0;
-      border-left: ${get('borders.1')(theme)} ${get('colors.white')(theme)};
+      border-left: ${get('borders.1')} ${get('colors.white')}; // theme-audit: one-off
     }
   `
 }
@@ -84,8 +84,8 @@ const AvatarStackBody = styled.span`
     height: 20px;
     box-sizing: content-box;
     margin-right: -11px;
-    background-color: ${get('colors.white')};
-    border-right: ${get('borders.1')} ${get('colors.white')};
+    background-color: ${get('colors.white')}; //theme-audit: one off?
+    border-right: ${get('borders.1')} ${get('colors.white')}; // theme-audit: one off?
     border-radius: 2px;
     transition: margin 0.1s ease-in-out;
 
@@ -113,7 +113,7 @@ const AvatarStackBody = styled.span`
   .AvatarItem-more {
     z-index: 1;
     margin-right: 0;
-    background: ${get('colors.gray.1')};
+    background: ${get('colors.gray.1')}; //theme-audit: one-off
 
     &::before,
     &::after {
@@ -122,17 +122,17 @@ const AvatarStackBody = styled.span`
       height: 20px;
       content: '';
       border-radius: 2px;
-      outline: ${get('borders.1')} ${get('colors.white')};
+      outline: ${get('borders.1')} ${get('colors.white')}; //theme-audit: one-off
     }
 
     &::before {
       width: 17px;
-      background: ${get('colors.gray.2')};
+      background: ${get('colors.gray.2')}; //theme-audit: one-off
     }
 
     &::after {
       width: 14px;
-      background: ${get('colors.gray.3')};
+      background: ${get('colors.gray.3')}; //theme-audit: one-off
     }
   }
   ${props => (props.alignRight ? alignRightStyles(props.theme) : '')}

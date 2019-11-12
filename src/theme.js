@@ -26,9 +26,32 @@ const colors = {
     unknown: gray[4]
   },
   button: {
+    default: {
+      text: gray[9],
+      bg: gray[1],
+      gradient1: gray[0],
+      gradient2:'rgb(239, 243, 246)', // TODO: standardize to color scale?
+      border: 'rgba(27, 31, 35, 0.2)', // TODO: standardize to color scale?
+      hoverBg: 'rgb(230, 235, 241)',
+      hoverBorder: blackfade35,
+      activeBg: 'rgb(233, 236, 239)',
+      activeBoxShadow: blackfade15,
+      activeBorder: 'rgba(27, 31, 35, 0.2)',
+    },
+    danger: {
+
+    },
+    primary: {
+
+    },
+    outline: {
+
+    }
+  }
+  button: {
     disabledColor: 'rgba(36, 41, 46, 0.4)',
     bg2: 'rgb(239, 243, 246)',
-    border: 'rgba(27, 31, 35, 0.2)',
+    border: ,
     focusShadow: 'rgba(3, 102, 214, 0.3)',
     activeBg: 'rgb(233, 236, 239)',
     hoverBg: 'rgb(230, 235, 241)',
