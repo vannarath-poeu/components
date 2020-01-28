@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {get} from './constants'
+import {get, COMMON} from './constants'
 import Avatar from './Avatar'
 import theme from './theme'
 
@@ -10,6 +10,7 @@ const getBackgroundColor = get('colors.white')
 const Wrapper = styled('div')`
   display: inline-flex;
   position: relative;
+  ${COMMON}
 `
 
 const childStyles = props => ({
@@ -39,7 +40,7 @@ AvatarPair.displayName = 'AvatarPair'
 AvatarPair.defaultProps = {theme}
 AvatarPair.propTypes = {
   children: PropTypes.instanceOf(Avatar),
-  ...Avatar.propTypes,
+  ...COMMON.propTypes,
   theme: PropTypes.object
 }
 
