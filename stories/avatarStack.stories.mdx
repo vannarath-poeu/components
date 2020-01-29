@@ -1,0 +1,22 @@
+import {AvatarStack} from '../src';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="AvatarStack" component={AvatarStack} />
+
+<Story name="default">
+  <AvatarStack>
+    <img alt="Primer" src="https://avatars.githubusercontent.com/primer"/>
+    <img alt="GitHub" src="https://avatars.githubusercontent.com/github"/>
+    <img alt="Atom" src="https://avatars.githubusercontent.com/atom"/>
+    <img alt="Desktop" src="https://avatars.githubusercontent.com/desktop"/>
+  </AvatarStack>
+</Story>
+
+<Story name="Right Aligned">
+  <AvatarStack alignRight ml="100px">
+    <img alt="Primer" src="https://avatars.githubusercontent.com/primer"/>
+    <img alt="GitHub" src="https://avatars.githubusercontent.com/github"/>
+    <img alt="Atom" src="https://avatars.githubusercontent.com/atom"/>
+    <img alt="Desktop" src="https://avatars.githubusercontent.com/desktop"/>
+  </AvatarStack>
+</Story>

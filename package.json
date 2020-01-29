@@ -36,6 +36,7 @@
   "dependencies": {
     "@primer/octicons-react": "^9.2.0",
     "@reach/dialog": "0.3.0",
+    "@storybook/addon-docs": "5.3.9",
     "@styled-system/prop-types": "5.1.2",
     "@styled-system/props": "5.1.4",
     "@styled-system/theme-get": "5.1.2",
