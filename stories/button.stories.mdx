@@ -1,13 +1,19 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
-import { Button } from '../src';
-import Docs from '../docs/content/Buttons.md'
-
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Button } from '../src'
+import Docs from '../docs/content/Buttons.mdx'
+import {text, boolean, number } from '@storybook/addon-knobs'
 
 <Meta title='Button' component={Button}/>
 
 <Story name="default">
-  <Button>Hello Button</Button>
+  <Button
+    disabled={boolean('disabled', false)}
+    as={text('as', 'button')}
+    fontSize={text('fontSize', '1')}
+    variant={text('variant', 'medium')}
+  >
+    hi
+  </Button>
 </Story>
-
 
 <Docs/>
