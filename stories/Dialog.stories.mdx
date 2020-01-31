@@ -1,0 +1,23 @@
+import {Meta, Story, Props} from '@storybook/addon-docs/blocks'
+import {Dialog} from '../src'
+import State from '../docs/components/State'
+import Docs from '../docs/content/Dialog.mdx'
+
+<Meta title='Dialog' component={Dialog}/>
+
+<Story name="default">
+  <State default={false}>
+    {([isOpen, setIsOpen]) => (
+      <>
+        <Button onClick={() => setIsOpen(true)}>Open</Button>
+        <Dialog title="Title" isOpen={isOpen} onDismiss={() => setIsOpen(false)}>
+          <Box p={3}>
+            <Text fontFamily="sans-serif">Some content</Text>
+          </Box>
+        </Dialog>
+      </>
+    )}
+  </State>
+</Story>
+
+<Docs/>
