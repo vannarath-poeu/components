@@ -1,8 +1,7 @@
 import React from 'react'
-import { addDecorator, addParameters } from '@storybook/react'
+import {addDecorator, addParameters} from '@storybook/react'
 import {BaseStyles, Link, Heading, Flex} from '../src'
-import { withKnobs} from '@storybook/addon-knobs'
-
+import {withKnobs} from '@storybook/addon-knobs'
 
 addDecorator(storyFn => {
   return (

@@ -1,0 +1,14 @@
+import {Meta, Story, Props} from '@storybook/addon-docs/blocks'
+import {CounterLabel} from '../src'
+import Docs from '../docs/content/CounterLabel.mdx'
+import {text} from '@storybook/addon-knobs'
+
+<Meta title='CounterLabel' component={CounterLabel}/>
+
+<Story name="default">
+  <CounterLabel>
+    12
+  </CounterLabel>
+</Story>
+
+<Docs/>
