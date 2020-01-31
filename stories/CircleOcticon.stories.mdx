@@ -1,0 +1,19 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {CircleOcticon} from '../src'
+import {Check} from '@primer/octicons-react'
+import Docs from '../docs/content/CircleOcticon.mdx'
+import {text, number} from '@storybook/addon-knobs'
+
+<Meta title='CircleOcticon' component={CircleOcticon}/>
+
+<Story name="default">
+  <CircleOcticon
+    size={number('size', 32)}
+    icon={Check}
+    bg={text('bg', 'green.5')}
+    color={text('color', 'white')}
+  >
+  </CircleOcticon>
+</Story>
+
+<Docs/>
