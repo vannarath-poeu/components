@@ -1,15 +1,20 @@
 import {BorderBox} from '../src';
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 import Docs from '../docs/content/BorderBox.mdx'
+import {text, number} from '@storybook/addon-knobs'
 
 <Meta title="BorderBox" component={BorderBox} />
 
 <Story name="default">
-    <BorderBox>This is a BorderBox</BorderBox>
-</Story>
-
-<Story name="Custom Border Color">
-    <BorderBox borderColor="red.4">This is a BorderBox</BorderBox>
+    <BorderBox
+        border={text('border', '1px solid')}
+        borderWidth={text('borderWidth')}
+        borderColor={text('borderColor', 'gray.2')}
+        borderRadius={text('borderRadius', '1')}
+        boxShadow={text('boxShadow')}
+    >
+        This is a BorderBox
+    </BorderBox>
 </Story>
 
 <Docs/>
