@@ -1,0 +1,19 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {CircleBadge} from '../src'
+import {Zap} from '@primer/octicons-react'
+import Docs from '../docs/content/CircleBadge.mdx'
+import {text, boolean, number} from '@storybook/addon-knobs'
+
+<Meta title='CircleBadge' component={CircleBadge}/>
+
+<Story name="default">
+  <CircleBadge
+    inline={boolean('inline', false)}
+    size={number('size')}
+    variant={text('variant', 'medium')}
+  >
+    <CircleBadge.Icon icon={Zap}/>
+  </CircleBadge>
+</Story>
+
+<Docs/>
