@@ -1,0 +1,17 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {Dropdown} from '../src'
+import Docs from '../docs/content/Dropdown.mdx'
+
+<Meta title='Dropdown' component={Dropdown}/>
+
+<Story name="default">
+  <Dropdown title="Dropdown">
+    <Dropdown.Menu direction='sw'>
+      <Dropdown.Item>Item 1</Dropdown.Item>
+      <Dropdown.Item>Item 2</Dropdown.Item>
+      <Dropdown.Item>Item 3</Dropdown.Item>
+    </Dropdown.Menu>
+  </Dropdown>
+</Story>
+
+<Docs/>
