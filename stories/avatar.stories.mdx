@@ -1,11 +1,16 @@
 import {Avatar} from '../src'
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import {Meta, Story} from '@storybook/addon-docs/blocks'
 import Docs from '../docs/content/Avatar.mdx'
+import {text, number} from '@storybook/addon-knobs'
 
 <Meta title="Avatar" component={Avatar} />
 
 <Story name="default">
-  <Avatar mb={4} src="https://avatars.githubusercontent.com/primer" size={128} />
+  <Avatar
+    src={text('src', 'https://avatars.githubusercontent.com/primer')}
+    size={number('size', 128)}
+    alt={text('alt', '')}
+  />
 </Story>
 
 <Docs/>

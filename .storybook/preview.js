@@ -1,6 +1,6 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react'
-import {BaseStyles, Link, Heading} from '../src'
+import {BaseStyles, Link, Heading, Flex} from '../src'
 import { withKnobs} from '@storybook/addon-knobs'
 
 // import {Code, InlineCode, Table, Image, Paragraph, HorizontalRule, Blockquote, Heading, List, DescriptionList} from '@primer/gatsby-theme-doctocat'
@@ -17,7 +17,9 @@ const components = {
 addDecorator(storyFn => {
   return (
     <BaseStyles>
-      {storyFn()}
+      <Flex justifyContent="center" p={4}>
+        {storyFn()}
+      </Flex>
     </BaseStyles>
   )
 });
