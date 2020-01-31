@@ -1,0 +1,27 @@
+import {Meta, Story, Props} from '@storybook/addon-docs/blocks'
+import {Details, Button} from '../src'
+import Docs from '../docs/content/Details.mdx'
+
+<Meta title='Details' component={Details}/>
+
+<Story name="with static children">
+  <Details>
+    <Button as="summary">Click me</Button>
+    <p>This should show and hide</p>
+  </Details>
+</Story>
+
+<Story name="with children as a function">
+  <Details>
+    {({open}) => (
+      <>
+        <Button as="summary">
+          {open ? 'Hide' : 'Show'}
+        </Button>
+        <p>This should show and hide</p>
+      </>
+    )}
+  </Details>
+</Story>
+
+<Docs/>
