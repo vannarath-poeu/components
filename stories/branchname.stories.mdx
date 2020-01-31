@@ -1,11 +1,14 @@
 import {BranchName} from '../src'
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 import Docs from '../docs/content/BranchName.mdx'
+import {text} from '@storybook/addon-knobs'
 
 <Meta title='BranchName' component={BranchName}/>
 
 <Story name="default">
-  <BranchName>a_new_feature_branch</BranchName>
+  <BranchName href={text('href')}>
+    a_new_feature_branch
+  </BranchName>
 </Story>
 
 <Docs/>
