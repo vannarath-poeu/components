@@ -1,0 +1,21 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {FilteredSearch, Dropdown, TextInput} from '../src'
+import Docs from '../docs/content/FilteredSearch.mdx'
+import {Search} from '@primer/octicons-react'
+
+<Meta title="FilteredSearch" component={FilteredSearch} />
+
+<Story name="default">
+  <FilteredSearch>
+    <Dropdown title="Filter">
+      <Dropdown.Menu direction="sw">
+        <Dropdown.Item>Item 1</Dropdown.Item>
+        <Dropdown.Item>Item 2</Dropdown.Item>
+        <Dropdown.Item>Item 3</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+    <TextInput icon={Search} />
+  </FilteredSearch>
+</Story>
+
+<Docs/>
