@@ -1,0 +1,14 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {LabelGroup, Label} from '../src'
+
+<Meta title='LabelGroup' component={LabelGroup}/>
+
+<Story name="default">
+  <LabelGroup>
+    <Label>Default label</Label>
+    <Label bg='red.4'>Label with red background</Label>
+    <Label outline>Default outline label</Label>
+  </LabelGroup>
+</Story>
+
+<Docs/>
