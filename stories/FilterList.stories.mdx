@@ -1,0 +1,16 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {FilterList} from '../src'
+import Docs from '../docs/content/FilterList.mdx'
+import {Search} from '@primer/octicons-react'
+
+<Meta title="FilterList" component={FilterList} />
+
+<Story name="default">
+  <FilterList>
+    <FilterList.Item selected count='32' href='#foo'>First Filter</FilterList.Item>
+    <FilterList.Item count='2' href='#bar'>Second Filter</FilterList.Item>
+    <FilterList.Item href='#baz'>Third Filter</FilterList.Item>
+  </FilterList>
+</Story>
+
+<Docs/>
