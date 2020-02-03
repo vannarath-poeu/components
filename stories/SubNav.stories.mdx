@@ -1,0 +1,19 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {SubNav} from '../src'
+import Docs from '../docs/content/SubNav.mdx'
+
+<Meta title='SubNav' component={SubNav}/>
+
+<Story name="SubNav">
+  <SubNav aria-label="Main">
+    <SubNav.Links>
+      <SubNav.Link href="#home" selected>
+        Home
+      </SubNav.Link>
+      <SubNav.Link href="#documentation">Documentation</SubNav.Link>
+      <SubNav.Link href="#support">Support</SubNav.Link>
+    </SubNav.Links>
+  </SubNav>
+</Story>
+
+<Docs/>
