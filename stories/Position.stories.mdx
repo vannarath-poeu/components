@@ -1,5 +1,5 @@
 import {Meta, Story} from '@storybook/addon-docs/blocks'
-import {Box, Heading, BorderBox, Relative, Absolute, Sticky} from '../src'
+import {Box, Heading, BorderBox, Relative, Absolute, Fixed, Sticky} from '../src'
 import Docs from '../docs/content/Position.mdx'
 
 <Meta title='Position' component={Relative}/>
@@ -28,6 +28,12 @@ import Docs from '../docs/content/Position.mdx'
       I'm sticky!
     </Sticky>
   </BorderBox>
+</Story>
+
+<Story name="Fixed">
+  <Fixed bottom={0} right={0} bg="red.2" p={2}>
+    I'm fixed to the bottom right.
+  </Fixed>
 </Story>
 
 <Docs/>
