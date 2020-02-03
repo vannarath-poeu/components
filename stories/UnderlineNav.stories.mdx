@@ -1,0 +1,17 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {UnderlineNav} from '../src'
+import Docs from '../docs/content/UnderlineNav.mdx'
+
+<Meta title='UnderlineNav' component={UnderlineNav}/>
+
+<Story name="UnderlineNav">
+  <UnderlineNav aria-label="Main">
+    <UnderlineNav.Link href="#home" selected>
+      Home
+    </UnderlineNav.Link>
+    <UnderlineNav.Link href="#documentation">Documentation</UnderlineNav.Link>
+    <UnderlineNav.Link href="#support">Support</UnderlineNav.Link>
+  </UnderlineNav>
+</Story>
+
+<Docs/>
