@@ -1,0 +1,17 @@
+import {Meta, Story} from '@storybook/addon-docs/blocks'
+import {TabNav} from '../src'
+import Docs from '../docs/content/TabNav.mdx'
+
+<Meta title='TabNav' component={TabNav}/>
+
+<Story name="TabNav">
+  <TabNav aria-label="Main">
+    <TabNav.Link href="#home" selected>
+      Home
+    </TabNav.Link>
+    <TabNav.Link href="#documentation">Documentation</TabNav.Link>
+    <TabNav.Link href="#support">Support</TabNav.Link>
+  </TabNav>
+</Story>
+
+<Docs/>
