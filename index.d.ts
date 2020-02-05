@@ -16,6 +16,10 @@ declare module '@primer/components' {
   interface LayoutProps
     extends BaseProps,
       StyledSystem.LayoutProps {}
+  
+  interface GridProps
+    extends BaseProps,
+    StyledSystem.GridProps {}
 
   interface TypographyProps
     extends BaseProps,
@@ -200,6 +204,8 @@ declare module '@primer/components' {
     variant?: 'small' | 'medium' | 'large' | 'xl'
     dropshadow?: boolean
   }
+
+  export const Grid: React.FunctionComponent<GridProps>
 
   export const Label: React.FunctionComponent<LabelProps>
 
@@ -423,6 +429,11 @@ declare module '@primer/components/src/FilterList' {
 declare module '@primer/components/src/Flash' {
   import {Flash} from '@primer/components'
   export default Flash
+}
+
+declare module '@primer/components/src/Grid' {
+  import {Grid} from '@primer/components'
+  export default Grid
 }
 
 declare module '@primer/components/src/CounterLabel' {
