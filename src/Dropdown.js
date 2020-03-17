@@ -10,9 +10,7 @@ import theme from './theme'
 const DropdownBase = ({title, children, className, ...rest}) => {
   return (
     <Details overlay className={className} {...rest}>
-      <>
         {children}
-      </>
     </Details>
   )
 }
