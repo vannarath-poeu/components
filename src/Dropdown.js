@@ -11,14 +11,17 @@ const DropdownBase = ({title, children, className, ...rest}) => {
   return (
     <Details overlay className={className} {...rest}>
       <>
-        <Button as="summary" aria-haspopup="true" {...rest}>
-          {title}
-          <DropdownCaret />
-        </Button>
         {children}
       </>
     </Details>
   )
+}
+
+Dropdown.Button = (props) => {
+  <Button as="summary" aria-haspopup="true" {...props}>
+    {title}
+    <DropdownCaret />
+  </Button>
 }
 const Dropdown = styled(DropdownBase)`
   position: relative;
