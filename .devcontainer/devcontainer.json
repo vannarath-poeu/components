@@ -1,7 +1,7 @@
 {
-	"name": "Primer Components",
-	"forwardPorts": [
-		8000
-	],
-	"postCreateCommand": "pushd docs && yarn && popd && yarn"
+  "name": "Primer Components",
+  "forwardPorts": [
+    8000
+  ],
+  "postCreateCommand": "pushd docs && yarn && popd && yarn"
 }
