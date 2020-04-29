@@ -3,18 +3,16 @@ import PropTypes from 'prop-types'
 import {TYPOGRAPHY, COMMON, get} from './constants'
 import theme from './theme'
 
-const Heading = styled.h2`
-  font-weight: ${get('fontWeights.bold')};
-  font-size: ${get('fontSizes.5')};
-  margin: 0;
-  ${TYPOGRAPHY} ${COMMON};
-`
+
+export const Heading = ({as, ...props}) => <Text as={as} fontWeight="bold" margin="0" fontSize={[`mobileHeadingSizes.${as}`, `mobileHeadingSizes.${as}`, `headingSizes.${as}`]} {...props} />
 
 Heading.defaultProps = {
-  theme
+  theme,
+  as: 'h2'
 }
 
 Heading.propTypes = {
+  as: PropTypes.oneOf('h1', 'h2', 'h3', 'h4', 'h5', 'h6'),
   theme: PropTypes.object,
   ...COMMON.propTypes,
   ...TYPOGRAPHY.propTypes
