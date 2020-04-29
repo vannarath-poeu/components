@@ -1,6 +1,5 @@
 {
 	"name": "Primer Components",
-	"image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-12",
 	"forwardPorts": [
 		8000
 	],
